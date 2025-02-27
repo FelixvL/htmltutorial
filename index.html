@@ -1,29 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mijn Bedrijf</title>
     <link rel="stylesheet" href="lescss.css">
-    <style>
- 
-        p{
-            color:orange;
-            background-color: blue;
-        }
-        h1{
-            padding:12px;
-            color:brown;
-        }
-    </style>
 </head>
 <body>
-    <!-- COMMENTING -->
-    <!-- INLINE CSS -->
-    <h1 style="color:rgba(45,66,77,0.5);background-color:rgb(33, 139, 255);">CSS Cascading Style Sheets</h1>
-    <p>
-        Dit is een stuk tekst
-    </p>
-    <h1>Andere Titel H1</h1>
+    <header>
+        <h1>Welkom bij Mijn Bedrijf</h1>
+        <nav>
+            <ul>
+                <li><a href="#over" target="_blank">Over Ons</a></li>
+                <li><a href="#diensten" target="_parent">Diensten</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="over">
+            <h2 class="belangrijk">Over Ons</h2>
+            <p class="belangrijk">
+                Lorem ipsum dolor sit amet. Et minima voluptas ab dolor ipsam vel architecto galisum et recusandae delectus in quod tempore At saepe dolor. Ut asperiores voluptas quo nesciunt mollitia quo impedit dolores. In dolor accusamus est quas culpa ad iste deleniti ab commodi consequatur ut velit eligendi. Aut eaque quasi ut Quis illum qui error reiciendis et quibusdam odio et numquam fugit est iste dolore ut suscipit quia.
+            </p>
+    </section>
+        
+        <section id="diensten">
+            <h2>Onze Diensten</h2>
+            <article>
+                <h3>Webontwikkeling</h3>
+                <p>
+                    Lorem ipsum dolor sit amet. Et minima voluptas ab dolor ipsam vel architecto galisum et recusandae delectus in quod tempore At saepe dolor. Ut asperiores voluptas quo nesciunt mollitia quo impedit dolores. In dolor accusamus est quas culpa ad iste deleniti ab commodi consequatur ut velit eligendi. Aut eaque quasi ut Quis illum qui error reiciendis et quibusdam odio et numquam fugit est iste dolore ut suscipit quia.
+                </p>
+                <img src="./images/kat.png" width="300">
+            </article>
+            <article>
+                <h3>Big Data</h3>
+                <p>
+                    Lorem ipsum dolor sit amet. Et minima voluptas ab dolor ipsam vel architecto galisum et recusandae delectus in quod tempore At saepe dolor. Ut asperiores voluptas quo nesciunt mollitia quo impedit dolores. In dolor accusamus est quas culpa ad iste deleniti ab commodi consequatur ut velit eligendi. Aut eaque quasi ut Quis illum qui error reiciendis et quibusdam odio et numquam fugit est iste dolore ut suscipit quia.
+                </p>
+                <img src="./images/hond.jpg" width="300">
+            </article>
+            <article>
+                <h3>Cloud</h3>
+                <p>
+                    Lorem ipsum dolor sit amet. Et minima voluptas ab dolor ipsam vel architecto galisum et recusandae delectus in quod tempore At saepe dolor. Ut asperiores voluptas quo nesciunt mollitia quo impedit dolores. In dolor accusamus est quas culpa ad iste deleniti ab commodi consequatur ut velit eligendi. Aut eaque quasi ut Quis illum qui error reiciendis et quibusdam odio et numquam fugit est iste dolore ut suscipit quia.
+                </p>
+                <img src="./images/paard.png" width="300">
+            </article>
+            <article>
+                <h3>Robotica</h3>
+                <p>
+                    Lorem ipsum dolor sit amet. Et minima voluptas ab dolor ipsam vel architecto galisum et recusandae delectus in quod tempore At saepe dolor. Ut asperiores voluptas quo nesciunt mollitia quo impedit dolores. In dolor accusamus est quas culpa ad iste deleniti ab commodi consequatur ut velit eligendi. Aut eaque quasi ut Quis illum qui error reiciendis et quibusdam odio et numquam fugit est iste dolore ut suscipit quia.
+                </p>
+                <img src="./images/kat.png" width="300">
+            </article>
+        </section>
+        
+        <aside>
+            <h3>Nieuws</h3>
+            <p>
+                Lorem ipsum dolor sit amet. Et minima voluptas ab dolor ipsam vel architecto galisum et recusandae delectus in quod tempore At saepe dolor. Ut asperiores voluptas quo nesciunt mollitia quo impedit dolores. In dolor accusamus est quas culpa ad iste deleniti ab commodi consequatur ut velit eligendi. Aut eaque quasi ut Quis illum qui error reiciendis et quibusdam odio et numquam fugit est iste dolore ut suscipit quia.
+            </p>
+    </aside>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Mijn Bedrijf. Alle rechten voorbehouden.</p>
+    </footer>
 </body>
 </html>
