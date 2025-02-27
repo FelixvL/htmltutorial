@@ -7,12 +7,36 @@
     <script>
         function eennaam(){
             //alert();
-            //document.getElementById("uitkomst").innerHTML = eenvakje;
+            let x = 15;
+            let y = x + x;
+            y += 15;
+            y++;
+            let z = "goede";
+            let r = "morgen";
+            console.log(z + r);
+            // assignment operators
+            // = += *= -= /= ++ --
+            // arithmic operators
+            // + - * / %            +
+            // comparative operators    -- > boolean
+            //   <  >    <= >=  !=   ==   
+            // logische operators   operand  boolean --> boolean
+            //  && and  || or  !
+            console.log(y == 46)
+            let q = document.getElementById("invoer").value;
+            if(q<=47){
+                document.getElementById("uitkomst").innerHTML = z+r;
+            }else{
+                document.getElementById("uitkomst").innerHTML = "Geen goede morgen";
+                document.getElementById("uitkomst").style.color = 'red';
+            }
+            //document.getElementById("uitkomst").innerHTML = y;
         }
     </script>
 </head>
 <body>
-    <button onclick="eennaam()">Klik Hier</button>
+    <input id="invoer">
+    <button onmouseover="eennaam()">Klik Hier</button>
     <div id="uitkomst">X</div>
 </body>
 </html>
