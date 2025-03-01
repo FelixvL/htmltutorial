@@ -5,38 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function eennaam(){
-            //alert();
-            let x = 15;
-            let y = x + x;
-            y += 15;
-            y++;
-            let z = "goede";
-            let r = "morgen";
-            console.log(z + r);
-            // assignment operators
-            // = += *= -= /= ++ --
-            // arithmic operators
-            // + - * / %            +
-            // comparative operators    -- > boolean
-            //   <  >    <= >=  !=   ==   
-            // logische operators   operand  boolean --> boolean
-            //  && and  || or  !
-            console.log(y == 46)
-            let q = document.getElementById("invoer").value;
-            if(q<=47){
-                document.getElementById("uitkomst").innerHTML = z+r;
-            }else{
-                document.getElementById("uitkomst").innerHTML = "Geen goede morgen";
-                document.getElementById("uitkomst").style.color = 'red';
+        function metArrays(){
+            document.getElementById("uitkomst").innerHTML = "";
+            let mijnlijst = [34, 3, 2, 5, 66];
+            console.log(mijnlijst[3] );
+
+            for(let x = 0; x < 3; x++){
+                alert();
             }
-            //document.getElementById("uitkomst").innerHTML = y;
+
+            for(let y =0; y < mijnlijst.length ; y++){
+                
+                document.getElementById("uitkomst").innerHTML += 
+                        `<h1>${mijnlijst[y]}</h1>`;
+            }
+
+
+
+
+        }
+        function start(){
+            document.getElementById("uitkomst").innerHTML = "";
+            console.log("start");
+                        // argument
+            tweedefunctie("Goedemorgen", "Javascripter");// call
+            tweedefunctie("Goedeavond", "HTMLer");// call
+        }
+                                // parameter
+        function tweedefunctie(mijnparam, tweede){// definitie
+            console.log("in tweede");
+            console.log(mijnparam + " " + tweede);
+            document.getElementById("uitkomst").innerHTML += 
+                            `
+                            <h1>${mijnparam}</h1>
+                            <h2>${tweede}</h2>
+                            `;
         }
     </script>
 </head>
 <body>
     <input id="invoer">
-    <button onmouseover="eennaam()">Klik Hier</button>
-    <div id="uitkomst">X</div>
+    <button onclick="metArrays()">Klik Hier</button>
+    <div id="uitkomst">Uitkomst</div>
 </body>
 </html>
