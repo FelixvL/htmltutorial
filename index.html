@@ -4,48 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        function metArrays(){
-            document.getElementById("uitkomst").innerHTML = "";
-            let mijnlijst = [34, 3, 2, 5, 66];
-            console.log(mijnlijst[3] );
-
-            for(let x = 0; x < 3; x++){
-                alert();
-            }
-
-            for(let y =0; y < mijnlijst.length ; y++){
-                
-                document.getElementById("uitkomst").innerHTML += 
-                        `<h1>${mijnlijst[y]}</h1>`;
-            }
-
-
-
-
+    <style>
+        h2{
+            color:red;
         }
+    </style>
+    <script>
+        
+        let boodschappenlijst = []; // globale variabele
         function start(){
             document.getElementById("uitkomst").innerHTML = "";
             console.log("start");
-                        // argument
-            tweedefunctie("Goedemorgen", "Javascripter");// call
-            tweedefunctie("Goedeavond", "HTMLer");// call
-        }
-                                // parameter
-        function tweedefunctie(mijnparam, tweede){// definitie
-            console.log("in tweede");
-            console.log(mijnparam + " " + tweede);
-            document.getElementById("uitkomst").innerHTML += 
-                            `
-                            <h1>${mijnparam}</h1>
-                            <h2>${tweede}</h2>
-                            `;
+            let product = {
+                naam : document.getElementById("naaminvoer").value,
+                prijs : document.getElementById("bedraginvoer").value,
+                kopen : function (){
+                    return "<h2> "+this.naam+"</h2><p> kost 2.00 Euro</p>"
+                }
+            }
+
+            boodschappenlijst.push(product);
+            console.log(boodschappenlijst);
+            for(let x = 0; x < boodschappenlijst.length; x++){
+                document.getElementById("uitkomst").innerHTML += 
+                            boodschappenlijst[x].kopen();
+            }
         }
     </script>
 </head>
 <body>
-    <input id="invoer">
-    <button onclick="metArrays()">Klik Hier</button>
+    <h1>Boodschappelijst:</h1>
+    Wat moet ik kopen: Artikel: <input id="naaminvoer"><br>
+    Begroting: <input id="bedraginvoer">
+    <button onclick="start()">Klik Hier</button>
     <div id="uitkomst">Uitkomst</div>
 </body>
 </html>
