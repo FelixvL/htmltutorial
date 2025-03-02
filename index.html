@@ -4,39 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        h2{
-            color:red;
-        }
-    </style>
     <script>
-        
-        let boodschappenlijst = []; // globale variabele
         function start(){
-            document.getElementById("uitkomst").innerHTML = "";
-            console.log("start");
-            let product = {
-                naam : document.getElementById("naaminvoer").value,
-                prijs : document.getElementById("bedraginvoer").value,
-                kopen : function (){
-                    return "<h2> "+this.naam+"</h2><p> kost 2.00 Euro</p>"
-                }
-            }
+            let tekst = "maandag";
 
-            boodschappenlijst.push(product);
-            console.log(boodschappenlijst);
-            for(let x = 0; x < boodschappenlijst.length; x++){
-                document.getElementById("uitkomst").innerHTML += 
-                            boodschappenlijst[x].kopen();
-            }
+            let nieuwe = tekst.lastIndexOf("a",4);
+
+            let lijst = ["maandag", "dinsdag"];
+            let nieuwelengte = lijst.unshift("woensdag", "donderdag");
+            console.log(lijst);
+            console.log(nieuwelengte);
+
+            let getallen = [5, 2, 8, 9, 7];
+            getallen.sort();
+            console.log(getallen);
+
+            let andereknop = document.getElementById("tweedeknop");
+            console.log(andereknop)
+            andereknop.click()
+
         }
     </script>
 </head>
 <body>
-    <h1>Boodschappelijst:</h1>
-    Wat moet ik kopen: Artikel: <input id="naaminvoer"><br>
-    Begroting: <input id="bedraginvoer">
+    <input id="invoer">
     <button onclick="start()">Klik Hier</button>
+    <button id="tweedeknop" onclick="alert()">Tweede</button>
     <div id="uitkomst">Uitkomst</div>
 </body>
 </html>
